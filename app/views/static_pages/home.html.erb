@@ -1,14 +1,14 @@
-<% provide(:title, "Home") %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= yield(:title) %> | for First Datecs</title>
-  </head>
-  <body>
-    <h1>Datecs website</h1>
-    <p>
-    <h1>StaticPages#home</h1>
-	Find me in app/views/static_pages/home.html.erb
-    </p>
-  </body>
-</html>
+<div class="center jumbotron">
+  <h1>Welcome to the Datecs blogs</h1>
+
+<!--   <h2>
+    This is the home page for the
+    <a href="http://datecs.bg">Datecs website</a>
+    show more.
+  </h2> -->
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+
+<%= link_to image_tag("photo1.jpg",:size => "1140x600",  alt: "logo"),'http://datecs.bg/' %>
