@@ -1,14 +1,33 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="cookingpost_form">
+        <%= render 'shared/cookingpost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
 <div class="center jumbotron">
-  <h1>Welcome to the Datecs blogs</h1>
+  <h1>Welcome to my cooking blog</h1>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZJy1ajvMU1k" frameborder="0" allowfullscreen></iframe>
 
 <!--   <h2>
     This is the home page for the
     <a href="http://datecs.bg">Datecs website</a>
     show more.
   </h2> -->
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<!-- 
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>  -->
 </div>
 
 
-<%= link_to image_tag("photo1.jpg",:size => "1140x600",  alt: "logo"),'http://datecs.bg/' %>
+<%= link_to image_tag("cooking1.jpg",:size => "1140x600",  alt: "logo"),'http://datecs.bg/' %>
+<% end %>

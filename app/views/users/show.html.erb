@@ -1,6 +1,26 @@
-<span class="glyphicon glyphicon-user"></span>
-<%= @user.name %>, <%= @user.email %>
+<!-- <span class="glyphicon glyphicon-user blue"></span>
+<%= @user.name %>, <%= @user.email %> -->
 
 <!-- <div class="video-container">
-  <iframe width="300" height="168" src="http://www.youtube.com/embed/MY__5O1i2a0" frameborder="0" allowfullscreen></iframe>
+  <iframe width="300" height="168" src="https://youtu.be/ZJy1ajvMU1k" frameborder="0" allowfullscreen></iframe>
 </div> -->
+
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.cookingposts.any? %>
+      <h3>Cookingposts (<%= @user.cookingposts.count %>)</h3>
+      <ol class="cookingposts">
+        <%= render @cookingposts %>
+      </ol>
+      <%= will_paginate @cookingposts %>
+    <% end %>
+  </div>
+</div>
