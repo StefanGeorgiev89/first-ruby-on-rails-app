@@ -11,7 +11,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
-  background-image: url("back.jpg");
+  background-image: url("back1.jpg");
   background-size: 100% 100%;
 
 }
@@ -146,7 +146,8 @@ input {
 
 .users {
   list-style: none;
-  margin: 0;
+  margin: 10;
+
   li {
     overflow: auto;
     padding: 10px 0;
@@ -176,16 +177,20 @@ input {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
+  // .user {
+  //   margin-top: 5em;
+  //   padding-top: 0;
+  // }
   .content {
     display: block;
+    text-align: initial;
     margin-left: 60px;
+    overflow: auto;
     img {
       display: block;
-      padding: 5px 0;
+      padding: 15px 0;
+      height: 300px;
+      width: 300px;
     }
   }
   .timestamp {
@@ -208,3 +213,16 @@ span.picture {
     border: 0;
   }
 }
+
+ .userphoto h1{
+
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background: image-url('chefss.jpg')
+}
+

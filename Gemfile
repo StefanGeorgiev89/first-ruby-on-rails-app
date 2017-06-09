@@ -13,7 +13,6 @@ gem 'sqlite3'
 gem 'puma', '~> 3.9.1'
 #bootstrap
 gem 'bootstrap-slider-rails', '~> 9.2.0'
-
 gem 'mini_magick','4.5.1'
 gem 'fog','1.38.0'
 gem 'bootstrap-will_paginate', '~> 1.0.0'
@@ -21,7 +20,7 @@ gem 'bootstrap-will_paginate', '~> 1.0.0'
 gem 'bootstrap-sass', '~> 3.3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem 'will_paginate',           '3.1.5'
+gem 'will_paginate','3.1.5'
 gem 'carrierwave', '~> 1.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

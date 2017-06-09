@@ -10,9 +10,6 @@ class CookingpostsController < ApplicationController
     else
       @feed_items = []
       render 'static_pages/home'
-      @cookingpost.destroy
-    	flash[:success] = "Cookingpost deleted"
-    	redirect_to request.referrer || root_url
     end
   end
 
@@ -25,7 +22,7 @@ class CookingpostsController < ApplicationController
   private
 
     def cookingpost_params
-      params.require(:cookingpost).permit(:content)
+      params.require(:cookingpost).permit(:content, :picture)
     end
 
     def correct_user

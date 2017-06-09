@@ -1,6 +1,9 @@
 <li id="cookingpost-<%= cookingpost.id %>">
   <span class="user"><%= link_to cookingpost.user.name, cookingpost.user %></span>
-  <span class="content"><%= cookingpost.content %></span>
+  <span class="content">
+    <%= image_tag cookingpost.picture.url if cookingpost.picture? %>
+    <%= cookingpost.content %>
+  </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(cookingpost.created_at) %> ago.
     <% if current_user?(cookingpost.user) %>
